@@ -1,1 +1,115 @@
-<p>Błąd, strona nie istnieje</p>
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Boberkowice - Dokumenty</title>
+
+  <!-- Pixel / 'minecraft-like' font from Google Fonts (Press Start 2P) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --overlay: rgba(0,0,0,0.45);
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: 'Press Start 2P', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      background: #000 url('miasto.png') center/cover no-repeat fixed; /* upewnij się, że miasto.png jest obok tego pliku */
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    /* półprzezroczysty overlay dla lepszego kontrastu */
+    .overlay{
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem;
+      box-sizing:border-box;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+    }
+
+    .card{
+      text-align:center;
+      max-width:980px;
+      width:100%;
+      padding:3rem 2rem;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+      border-radius:12px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.6);
+      backdrop-filter: blur(4px) saturate(1.2);
+    }
+
+    h1{
+      margin:0 0 1.5rem 0;
+      font-size: clamp(20px, 4.2vw, 48px); /* dopasowuje się do ekranu */
+      line-height:1.05;
+      letter-spacing:1px;
+      color:#fff;
+      /* 'stroke' effect using multiple text-shadows to przypomina minecraftową grubość */
+      text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        0 0 8px rgba(0,0,0,0.6);
+    }
+
+    .ztm-link{
+      display:inline-block;
+      margin-top:1.25rem;
+      text-decoration:none;
+      padding:14px 22px;
+      border-radius:8px;
+      border:3px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color:#fff;
+      font-size:12px;
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .ztm-link:hover{
+      transform:translateY(-4px);
+      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    .small{
+      margin-top:0.9rem;
+      font-size:10px;
+      opacity:0.9;
+      display:block;
+    }
+
+    footer{
+      text-align:center;
+      font-family: Arial, sans-serif;
+      font-size:12px;
+      padding:1rem;
+      background:rgba(0,0,0,0.55);
+    }
+
+    @media (max-width:420px){
+      .card{padding:2rem 1rem}
+      h1{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="card" role="main">
+      <h1>Dokumenty miasta Boberkowice:</h1>
+      <a class="ztm-link" href="https://boberkowice.github.io/dokumenty/wiezowiec-creftego" target="_blank" rel="noopener noreferrer">Regulamin wieżowca Creftiego</a>
+      <a class="ztm-link" href="https://boberkowice.github.io/dokumenty/beka" target="_blank" rel="noopener noreferrer">Regulamin BEKA</a>
+      <a class="ztm-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfWyJbMPalw5NdLR0Mke_xOCwG2uMw83Qf8XHMn5UJ_iwcoPg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Praca w ZTM Boberkowice</a>
+    </div>
+  </div>
+  <footer>©copyright by Mieszko Witaszak 2025</footer>
+</body>
+</html>
